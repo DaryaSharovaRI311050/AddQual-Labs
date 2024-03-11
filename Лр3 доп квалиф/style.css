@@ -1,0 +1,33 @@
+h1 {
+    color: red;
+}
+
+.BlueBack {
+    background-color: blue;
+    color: white;
+    width: 150px;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+}
+
+h2 {
+    background-color: green;
+    color: white;
+}
+
+.Text-indent {
+    text-indent: 40px;
+}
+
+li {
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.Red {
+    color: red;
+}
+
+a {
+    color: blue;
+}
