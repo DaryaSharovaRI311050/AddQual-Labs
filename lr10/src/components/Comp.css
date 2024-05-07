@@ -1,0 +1,19 @@
+.comp {
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    margin-top: 50px;
+    margin: 10px;
+}
+.picture {
+    margin-top: 50px;
+}
+.comp-header {
+    font-weight: 650;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.comp-text {
+    font-size: 22px;
+}
