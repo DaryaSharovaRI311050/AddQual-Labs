@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Развертывание</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="image/logo.png" alt="pic" />
+            <div class="introduction">
+                <div class="offer">
+                    <h1>
+                        С помощью нас<br />
+                        вы сможете создать то, о чем
+                    </h1>
+                    <span class="title_span"><strong>желаете!</strong></span>
+                    <p class="offer_text">
+                        Наши возможности + опыт позволят Вам достичь огромного успеха. Мы верим в вас!<br />
+                        И знаем это на 100%. Вас не остановить!
+                    </p>
+                    <a href="#" class="btn">Узнать больше...</a>
+                </div>
+                <img class="header_img" src="image/header-img.png" alt="pic" />
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h2 class="main_title">Что Вам необходимо?</h2>
+            <div class="main_block">
+                <div class="blocks">
+                    <img src="image/f3.png" alt="pic" />
+                    <h3>Первый блок</h3>
+                    <p>Очень много текста в блоке</p>
+                </div>
+                <div class="blocks">
+                    <img src="image/f4.png" alt="pic" />
+                    <h3>Второй блок</h3>
+                    <p>Очень много текста в блоке</p>
+                </div>
+                <div class="blocks">
+                    <img src="image/f5.png" alt="pic" />
+                    <h3>Третий блок</h3>
+                    <p>Очень много текста в блоке</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <div class="Order">
+            <div class="container">
+                <h2 class="second_title">Оформить заказ</h2>
+                <h3 class="third_title">Заполняйте поля кириллицей</h3>
+                <form>
+                    <div class="input_block">
+                        <input id="firstName" onblur="checkFirstName()" type="text" placeholder="Имя" required />
+                        <span id="firstname_check"></span>
+                    </div>
+                    <div class="input_block">
+                        <input id="secondName" onblur="checkSecondName()" type="text" placeholder="Фамилия" required />
+                        <span id="secondname_check"></span>
+                    </div>
+                    <div class="input_block">
+                        <input id="lastName" onblur="checkLastName()" type="text" placeholder="Отчетство" required />
+                        <span id="lastname_check"></span>
+                    </div>
+                    <div class="input_block">
+                        <input id="phone" onblur="checkPhone()" type="tel" placeholder="+7-988-888-88-88" required />
+                        <span id="phone_check"></span>
+                    <div class="input_block">
+                        <input id="email" onblur="checkEmail()" type="mail" placeholder="Email" required />
+                        <span id="email_check"></span>
+                    </div>
+                    <div class="input_block">
+                        <input id="address" onblur="checkAddress()" type="text" placeholder="Адрес доставки" required />
+                        <span id="address_check"></span>
+                    </div>
+                    <div class="input_block">
+                        <input id="date" type="date" placeholder="Дата доставки" required />
+                        <input id="time" type="time" placeholder="Время" required />
+                    </div>
+                    <div class="input_block">
+                        Способ оплаты:
+                        <select name="payment-method" required>
+                            <option>При получении</option>
+                            <option>Онлайн</option>
+                        </select>
+                    </div>
+
+                    <div class="button" onclick="Order()">
+                        Создать заказ
+                    </div>
+                </form>
+            </div>
+
+            <div id="hidden" class="order-summary">
+                <span id="orderSummary"></span>
+            </div>
+        </div>
+        </form>
+    </section>
+
+    <section class="form">
+        <div class="container">
+            <h2 class="second_title desktop animate__animated animate__jackInTheBox">Форма заказа обратного звонка</h2>
+            <div class="second_block">
+                <form id="sending" class="input">
+                    <input type="text" placeholder="Имя" required minlength="2"/><br />
+                    <input type="email" placeholder="Ваш E-mail" required/><br />
+                    <input type="tel" placeholder="Телефон" required minlength="7"/><br />
+                    <input type="text" placeholder="Какая тема Вас интересует?" required/><br />
+                    <button class="button" /*onclick="InputField()"*/ >Отправить вопрос!</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="end">
+        <div class="final_text">
+            <p>© Этот сайт защищен</p>
+        </div>
+    </section>
+    <script>
+        const input = document.getElementById('grow');
+        const measurer = document.getElementById('text-width');
+
+        input.addEventListener('input', function () {
+            const style = window.getComputedStyle(input);
+            measurer.style.fontSize = style.fontSize;
+            measurer.style.fontFamily = style.fontFamily;
+            measurer.style.fontWeight = style.fontWeight;
+            measurer.style.letterSpacing = style.letterSpacing;
+            measurer.textContent = input.value || input.placeholder;
+            measurer.style.display = 'inline';
+            const textWidth = measurer.offsetWidth;
+            measurer.style.display = 'none';
+            input.style.width = Math.max(textWidth + 20, 150) + 'px';
+        });
+        function InputField() {
+            document.getElementById('sending').reset();
+        }
+    </script>
+    <script src='./valid.js'></script>
+</body>
+
+</html>
