@@ -1,0 +1,95 @@
+.card {
+    display: flex;
+    box-shadow: 1px 1px 1px 1px rgb(160, 160, 160);
+    width: 300px;
+    height: 480px;
+    border-radius: 5px;
+
+}
+
+.picture {
+    width: 100%;
+    margin: 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.sticker {
+    font-size: 13px;
+    width: 80px;
+    position: relative;
+    bottom: 200px;
+    padding: 5px;
+    background-color: rgb(228, 126, 10);
+    color: #fff;
+}
+
+.pizzaName {
+    padding-left: 20px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.description {
+    color: rgb(0, 0, 0, 0.5);
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.diameter {
+    padding-left: 10px;
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 12px;
+    margin-left: 20px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.price {
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 26px;
+    font-weight: 550;
+}
+
+.order {
+    margin-left: 20px;
+}
+
+.countButton1 {
+    width: 30px;
+    height: 28px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 15% 0% 0% 15%;
+}
+
+.countButton2 {
+    width: 30px;
+    height: 28px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 0% 15% 15% 0%;
+}
+
+.counter {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 21px;
+    position: relative;
+    top: 1px;
+    border: 2px solid black;
+}
+
+.basketIcon {
+    margin-left: 5px;
+    width: 52px;
+    position: relative;
+    top: 8px;
+    border-radius: 3px;
+}
